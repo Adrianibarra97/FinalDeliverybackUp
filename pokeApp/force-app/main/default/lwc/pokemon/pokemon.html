@@ -1,0 +1,100 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card
+        title = {pokemon.Name}
+        class = "slds-media_responsive pokemon-style"
+    >
+        <div class = "slds-var-p-horizontal_small bear-tile-body">
+            <div class = "slds-media">
+                <div class = "slds-media__figure">
+                    <img
+                        src = {pokemon.Image__c}
+                        alt = "Pokemon profile"
+                        class = "pokemon-image"
+                    />
+                </div>
+
+                <div class = "slds-media__body">
+                    <p class = "slds-var-m-bottom_xx-small">
+                        Id: <b>{pokemon.ExtId__c}</b>
+                    </p>
+
+                    <p class = "slds-var-m-bottom_xx-small">
+                        Life: <b>{pokemon.Life__c}</b>
+                    </p>
+
+                    <p class = "slds-var-m-bottom_xx-small">
+                        Attack: <b>{pokemon.Attack__c}</b>
+                    </p>
+
+                    <p class = "slds-var-m-bottom_xx-small">
+                        Defense: <b>{pokemon.Defense__c}</b>
+                    </p>
+
+                    <p class = "slds-var-m-bottom_xx-small">
+                        Speed: <b>{pokemon.Speed__c}</b>
+                    </p>
+                </div>
+
+                <div class = "slds-media__body">
+                    <p class = "slds-var-m-bottom_xx-small">
+                        Height: <b>{pokemon.Height__c}</b>
+                    </p>
+
+                    <p class = "slds-var-m-bottom_xx-small">
+                        Weight: <b>{pokemon.Weihgt__c}</b>
+                    </p>
+
+                    <p class = "slds-var-m-bottom_xx-small">
+                        Generation: <b>{pokemon.Generation__c}</b>
+                    </p>
+
+                    <p class = "slds-var-m-bottom_xx-small">
+                        Order: <b>{pokemon.PokemonNumber__c}</b>
+                    </p>
+
+                    <p class = "slds-var-m-bottom_xx-small">
+                        Type: <b>{pokemon.Types__c}</b>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class = "slds-button-group">
+            <template if:true = {pokemon.Ability__c}>
+                <button
+                    class="slds-button action-button"
+                    onclick = {handleAbility}
+                >Ability</button>
+            </template>
+
+            <template if:true = {pokemon.Slot1__c}>
+                <button
+                    class="slds-button action-button"
+                    onclick = {handleMoves1}
+                >Move 1</button>
+            </template>
+
+            <template if:true = {pokemon.Slot2__c}>
+                <button
+                    class="slds-button action-button"
+                    onclick = {handleMoves2}
+                >Move 2</button>
+            </template>
+
+            <template if:true = {pokemon.Slot3__c}>
+                <button
+                    class="slds-button action-button"
+                    onclick = {handleMoves3}
+                >Move 3</button>
+            </template>
+
+            <template if:true = {pokemon.Slot4__c}>
+                <button
+                    class="slds-button action-button"
+                    onclick = {handleMoves4}
+                >Move 4</button>
+            </template>
+        </div>
+    </lightning-card>
+</template>

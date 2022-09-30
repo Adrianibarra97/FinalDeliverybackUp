@@ -1,0 +1,30 @@
+:host {
+	--sds-c-card-color-background: 				#fae8d2;
+}
+.pokemon-style {
+	border-radius:                  			0.50rem;
+	background-color:               			#fae8d2;
+	color: black;
+}
+
+.pokemon-image {
+    height: 									100px;
+}
+
+.action-button {
+	display: 									flex;
+	justify-content: 							center;
+	height: 									30px;
+	width:  									60px;
+	padding: 									2px;
+	margin: 									5px;
+	border: 									1px solid black;
+	background: 								#f6d3a9;
+	font-size: 									1em;
+	font-weight: 								bold;
+	color: 										black;
+}
+
+.action-button:hover {
+	background: 								#f1dbc0;
+}
